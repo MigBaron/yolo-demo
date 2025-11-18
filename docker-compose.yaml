@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - /run/udev:/run/udev:ro
+      - /dev/video0:/dev/video0
+    privileged: true
